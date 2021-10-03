@@ -14,11 +14,21 @@ const {
 const app = express();
 
 const PORT = process.env.PORT;
-mongoose.connect("mongodb://localhost:27017/Fruits", {
-	useNewUrlParser: true,
+// mongoose.connect("mongodb://localhost:27017/Fruits", {
+// 	useNewUrlParser: true,
 
-	useUnifiedTopology: true,
-});
+// 	useUnifiedTopology: true,
+// });
+
+mongoose.connect(
+	"mongodb+srv://Aa1791994:Aa1791994@cluster0.lgegl.mongodb.net/Books?retryWrites=true&w=majority",
+	{
+		useNewUrlParser: true,
+
+		useUnifiedTopology: true,
+	}
+);
+
 app.use(cors());
 
 app.use(express.json());
